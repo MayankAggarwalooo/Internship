@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayank Aggarwal - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+   <style>
+    .certificates-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .certificate-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .certificate-card:hover {
+      transform: scale(1.02);
+    }
+
+    .certificate-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cert-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 149, 200, 0.85);
+      color: white;
+      padding: 0.8rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .certificate-card:hover .cert-info {
+      transform: translateY(0);
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      font-size: 2.5rem;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .close:hover {
+      color: #f44336;
+    }
+  </style>
+  </head>
+<body>
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-center">
+        <a href="Home_Screen.html">Home</a>
+        <a href="About_me.html">About Me</a>
+        <a href="Experience.html">Experience</a>
+        <a href="project.html">Projects</a>
+        <a href="Certificates.html">Certificate</a>
+        <a href="Contact_me.html ">Contact Me</a>
+        <a href="resume.pdf" download>Download Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="certificates-container">
+    <div class="certificate-card">
+      <img src="certificate/physics wallah.png" alt="Certificate 1" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>WEB DEVELOPMENT BASICS</h4>
+        <p>Issued by PHYSICS WALLAH, April 2025</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/tableau.png" alt="Certificate 2" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>TABLEAU WORKSHOP</h4>
+        <p>Issued by DATA DYNAMOS, Sep 2024</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/snap.jpg" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>SNAPCHAT AR LENS</h4>
+        <p>Issued by BHARAT XR & MRIIRS, Jan 2025</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/AI.jpg" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>AI FOR STUDENTS</h4>
+        <p>Issued by NXTWAVE, Apr 2025</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/d3.png" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>D3 HACKATHON</h4>
+        <p>Issued by AMITY UNIVERSITY, March 2025</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/dit.png" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>DESIGN THINKING AND INOVATION</h4>
+        <p>Issued by ACM & MRIIRS, Feb 2025</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/hackindia.jpg" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>HACKINDIA 2024 HACKATHON</h4>
+        <p>Issued by HACKINDIA, August 2024</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/hwi.jpg" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>BUILD WITH INDIA HACKATHON</h4>
+        <p>Issued by HACK WITH INDIA</p>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="certificate/solve.png" alt="Certificate 3" onclick="openModal(this.src)">
+      <div class="cert-info">
+        <h4>SOLVE-A-THON 2025</h4>
+        <p>Issued by MRIIRS, March 2025</p>
+      </div>
+    </div>
+
+    <!-- Add more cards similarly -->
+  </section>
+
+  <!-- Modal -->
+  <div id="certModal" class="modal" onclick="closeModal(event)">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+    <img id="modalImg" src="">
+  </div>
+
+  <script>
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('modalImg');
+
+    function openModal(src) {
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+
+    function closeModal(event) {
+      if (event.target === modal || event.target.classList.contains('close')) {
+        modal.style.display = 'none';
+        modalImg.src = '';
+      }
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMENARCH | Architectural Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">LUMEN<span>ARCH</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">DESIGNING SPACES<br><span>THAT INSPIRE & TRANSFORM</span></h1>
+                <p>We create architectural masterpieces that blend innovation, functionality, and timeless elegance. Our designs transform spaces into experiences.</p>
+                <a href="#portfolio" class="hero-btn">VIEW OUR WORK <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="diagonal-divider"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Studio</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img reveal">
+                    <img src="ASSETS/A1.avif" alt="Architecture Studio">
+                </div>
+                <div class="about-text reveal">
+                    <h3>Creating Sustainable & Innovative Designs Since 2005</h3>
+                    <p>Lumen Architects is an award-winning architectural firm with a passion for creating spaces that resonate with their environment and the people who inhabit them. Our approach combines artistic vision with technical expertise.</p>
+                    <p>We believe that architecture should not only be visually stunning but also functional, sustainable, and responsive to its context. Our team of talented architects and designers work collaboratively to bring your vision to life.</p>
+                    <div class="stats">
+                        <div class="stat-item reveal">
+                            <h4>18+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item reveal">
+                            <h4>250+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item reveal">
+                            <h4>36</h4>
+                            <p>Awards Received</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Design</h3>
+                    <p>Custom homes, renovations, and luxury estates tailored to your lifestyle and preferences.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Architecture</h3>
+                    <p>Modern offices, retail spaces, and hospitality designs that elevate your brand identity.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Design</h3>
+                    <p>Eco-friendly solutions for energy-efficient buildings with minimal environmental impact.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Interior Architecture</h3>
+                    <p>Seamless integration of architecture and interiors for cohesive, beautiful spaces.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3>Urban Planning</h3>
+                    <p>Innovative solutions for community development and smart city infrastructure.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>3D Visualization</h3>
+                    <p>Photorealistic renderings and virtual tours to experience designs before construction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="interior">Interior</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A2.avif" alt="Modern Villa" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Cliffside Residence</h3>
+                        <p>Modern Villa overlooking the ocean</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A3.avif" alt="Office Building" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Corporate Headquarters</h3>
+                        <p>Sustainable office design</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A4.avif" alt="Luxury Penthouse" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Skyline Penthouse</h3>
+                        <p>Urban luxury living</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A5.avif" alt="Cafe Interior" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Urban Cafe</h3>
+                        <p>Industrial-chic interior design</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A6.avif" alt="Modern House" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Forest Retreat</h3>
+                        <p>Harmony with nature</p>
+                    </div>
+                </div>
+                <div class="portfolio-item reveal">
+                    <img src="ASSETS/A7.avif" alt="Museum" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Contemporary Art Museum</h3>
+                        <p>Cultural landmark design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card reveal">
+                    <img src="ASSETS/45.jpg" alt="Client" class="client-img">
+                    <p>"Working with Lumen Architects was an exceptional experience. Their attention to detail and innovative approach transformed our outdated home into a modern masterpiece that perfectly reflects our lifestyle."</p>
+                    <h4 class="client-name">Sarah Johnson</h4>
+                    <p class="client-role">Residential Project Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <h3>Let's Discuss Your Project</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Our Location</h4>
+                            <p>123 Design Avenue, Creative City, CC 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p>+1 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p>info@lumenarchitects.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday-Friday: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">LUMEN<span>ARCH</span></div>
+                    <p>Creating innovative architectural solutions that stand the test of time. We transform visions into spaces that inspire.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential Design</a></li>
+                        <li><a href="#">Commercial Architecture</a></li>
+                        <li><a href="#">Sustainable Design</a></li>
+                        <li><a href="#">Interior Architecture</a></li>
+                        <li><a href="#">3D Visualization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates and projects.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Lumen Architects. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="SCRIPT.JS"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Showcase</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+/* Layout */
+.container {
+  display: flex;
+  height: calc(100vh - 64px);
+}
+
+.project-thumbnails {
+  width: 300px;
+  background: #e8f4fa;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.thumb {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.thumb:hover {
+  border-color: #0095c8;
+}
+
+.thumb img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.thumb-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0095c8;
+}
+
+.thumb-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.project-info {
+  flex: 1;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: white;
+  gap: 3rem;
+}
+
+.project-info img {
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.project-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-info-text h2 {
+  font-size: 2rem;
+  color: #0095c8;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.project-info-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .project-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-info-text {
+    align-items: center;
+  }
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f44336;
+}
+  </style>
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-center">
+        <a href="Home_Screen.html">Home</a>
+        <a href="About_me.html">About Me</a>
+        <a href="Experience.html">Experience</a>
+        <a href="Project.html">Projects</a>
+        <a href="Certificates.html">Certificate</a>
+        <a href="Contact_me.html ">Contact Me</a>
+        <a href="resume.pdf" download>Download Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Left Side: Project Thumbnails -->
+    <aside class="project-thumbnails">
+      <div class="thumb" data-img="img/fast.png" 
+      data-title="FastMedico" data-desc="AI-powered health app." 
+      data-full="FastMedico is an intelligent healthcare solution that leverages AI and real-time doctor consultation to provide users with personalized health recommendations." 
+      data-features="AI-based symptom checker<br>Doctor appointment scheduler<br>Health dashboard<br>Medicine reminders<br>Medical record storage<br>Android app in Kotlin" 
+      data-goal="To make healthcare faster, smarter, and more accessible.">
+        <img src="img/Fastmedico.png" alt="FastMedico">
+        <div class="thumb-info">
+          <h4>FastMedico</h4>
+          <p>AI-powered health app.</p>
+        </div>
+      </div>
+      <div class="thumb" data-img="img/nutri.png" data-title="NutriDiet" data-desc="Smart diet plans with doctor support." data-full="NutriDiet is a smart nutrition planning platform combining AI and doctor guidance for personalized diet plans." data-features="AI-based diet suggestions<br>Doctor consultation<br>Diet tracking tools<br>Nutrition dashboard<br>Health goal planning<br>Mobile-friendly interface" data-goal="To help users adopt healthy eating habits tailored to their health.">
+        <img src="img/nutridiet.png" alt="NutriDiet">
+        <div class="thumb-info">
+          <h4>NutriDiet</h4>
+          <p>Smart diet plans.</p>
+        </div>
+      </div>
+      <div class="thumb" data-img="img/campusconnect.png" data-title="Campus Connect" data-desc="Club portal for events & study resources." data-full="Campus Connect is a centralized platform for students to explore club events, study resources, and updates." data-features="Event calendar<br>Notes and study links<br>Member communication<br>Admin tools for clubs<br>Responsive UI<br>Built with HTML/CSS/JS" data-goal="To connect students and clubs in a single digital space.">
+        <img src="img/campusconnect.png" alt="Campus Connect">
+        <div class="thumb-info">
+          <h4>Campus Connect</h4>
+          <p>Events & resources.</p>
+        </div>
+      </div>
+    </aside>
+    <section class="project-info">
+      <img id="info-img" src="img/Fastmedico.png" alt="Project Image" />
+      <div class="project-info-text">
+        <h2 id="info-title">FastMedico</h2>
+        <p id="info-desc">AI-powered health app.</p>
+        <p id="info-full">FastMedico is an intelligent healthcare solution...</p>
+        <p><strong>Key Features:</strong><br><span id="info-features">AI-based symptom checker<br>Doctor appointment scheduler</span></p>
+        <p><strong>Goal:</strong> <span id="info-goal">To make healthcare faster, smarter, and more accessible.</span></p>
+      </div>
+    </section>
+  </div>
+
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
